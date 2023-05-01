@@ -8,7 +8,7 @@ export const HaulerList = () => {
     let haulersHTML = "<ul>"
 
     for (const hauler of haulers) {
-        // Convert each dock object to an <li> and append to the docksHTML string
+        // Convert each hauler object to an <li> and append to the haulersHTML string
         haulersHTML += `
         <li>${hauler.name}</li>
         `
