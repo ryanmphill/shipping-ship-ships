@@ -1,3 +1,30 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+    background-color: skyblue;
+    color: #404040;
+    font-family: arial, sans-serif;
+}
+
+.container {
+    padding: 1rem;
+}
+
+section {
+    background-color: skyblue;
+    border: 2px dotted azure;
+    padding: 0.5rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    background-color: azure;
+    margin: 0.4rem 0;
+    padding: 0.33rem;
+    margin-left: -2.4rem;
+}
