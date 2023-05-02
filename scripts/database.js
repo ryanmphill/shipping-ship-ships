@@ -25,6 +25,18 @@ const database = {
         { id: 8, name: "Midnight Voyager", haulerId: 3 },
         { id: 9, name: "Mystic Meridian", haulerId: 4 },
         { id: 10, name: "The Golden Galleon", haulerId: 1 }
+    ],
+    contracts: [
+        { id: 1, haulerId: 1, dockId: 2 },
+        { id: 2, haulerId: 2, dockId: 4 },
+        { id: 3, haulerId: 3, dockId: 1 },
+        { id: 4, haulerId: 4, dockId: 3 },
+        { id: 5, haulerId: 5, dockId: 2 },
+        { id: 6, haulerId: 6, dockId: 4 },
+        { id: 7, haulerId: 1, dockId: 1 },
+        { id: 8, haulerId: 2, dockId: 3 },
+        { id: 9, haulerId: 6, dockId: 1 },
+        { id: 10, haulerId: 4, dockId: 2 }
     ]
 }
 
@@ -37,5 +49,9 @@ export const getHaulers = () => {
 }
 
 export const getShippingShips = () => {
-    return database.shippingShips.map(shippingShip => ({...shippingShip}))
+    return structuredClone(database.shippingShips)
+}
+
+export const getContracts = () => {
+    return database.contracts.map(contract => ({...contract}))
 }
