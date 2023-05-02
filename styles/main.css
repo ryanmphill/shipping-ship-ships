@@ -10,12 +10,15 @@ body {
 
 .container {
     padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 section {
     background-color: skyblue;
     border: 2px dotted azure;
     padding: 0.5rem;
+    width: 32%;
 }
 
 ul {

@@ -1,6 +1,30 @@
 import { getDocks, getHaulers } from "./database.js";
 
-const docks = getDocks()
+// Sort docks alphabetically by location and store in variable
+const docks = getDocks().sort((a, b) => {
+    // Define variables for the items in array that are being compared
+    // Use .toUpperCase() to ensure it is a case insensitive sort
+    const compareNameA = a.location.toUpperCase()
+    const compareNameB = b.location.toUpperCase()
+    /* Compare both names and determine which one comes first. 
+       The sort method does this by comparing UTF-16 code unit values*/
+    
+    /* If the comparison function returns a negative number (-1), it means that a should 
+       come before b in the sorted array. */
+    if (compareNameA < compareNameB) {
+        return -1;
+    }
+    /* If the comparison function returns a positive number (1), it means that a should 
+       come after b in the sorted array. */
+    if (compareNameA > compareNameB) {
+        return 1;
+    }
+    /* If the comparison function returns 0, it means that the order of a and b should remain unchanged. */
+    if (compareNameA === compareNameB) {
+        return 0;
+    }
+})
+
 const haulers = getHaulers()
 
 document.addEventListener(
@@ -48,10 +72,7 @@ document.addEventListener(
                 // Print the messageString as an alert
                 window.alert(messageString)
             }
-            
-        }
-
-        
+        }  
     }
 )
 

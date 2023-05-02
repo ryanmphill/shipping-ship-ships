@@ -1,7 +1,30 @@
 import { getHaulers, getShippingShips } from "./database.js";
 
+// Sort hauler ships alphabetically by name and store in variable
+const haulers = getHaulers().sort((a, b) => {
+    // Define variables for the items in array that are being compared
+    // Use .toUpperCase() to ensure it is a case insensitive sort
+    const compareNameA = a.name.toUpperCase()
+    const compareNameB = b.name.toUpperCase()
+    /* Compare both names and determine which one comes first. 
+       The sort method does this by comparing UTF-16 code unit values*/
+    
+    /* If the comparison function returns a negative number (-1), it means that a should 
+       come before b in the sorted array. */
+    if (compareNameA < compareNameB) {
+        return -1;
+    }
+    /* If the comparison function returns a positive number (1), it means that a should 
+       come after b in the sorted array. */
+    if (compareNameA > compareNameB) {
+        return 1;
+    }
+    /* If the comparison function returns 0, it means that the order of a and b should remain unchanged. */
+    if (compareNameA === compareNameB) {
+        return 0;
+    }
+})
 
-const haulers = getHaulers()
 const shippingShips = getShippingShips()
 
 document.addEventListener(
