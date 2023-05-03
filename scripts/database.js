@@ -7,12 +7,12 @@ const database = {
         { id: 5, location: "Someplace, Somewhere", volume: "0" }
     ],
     haulers: [
-        { id: 1, name: "Banshee", dockId: 2 },
-        { id: 2, name: "Enterprise", dockId: 4 },
-        { id: 3, name: "Big Kahuna", dockId: 1 },
-        { id: 4, name: "Yamato", dockId: 3 },
-        { id: 5, name: "Rogue", dockId: 2 },
-        { id: 6, name: "Mister Barge", dockId: 4 }
+        { id: 1, name: "Banshee", currentDockId: 2 },
+        { id: 2, name: "Enterprise", currentDockId: 4 },
+        { id: 3, name: "Big Kahuna", currentDockId: 1 },
+        { id: 4, name: "Yamato", currentDockId: 3 },
+        { id: 5, name: "Rogue", currentDockId: 2 },
+        { id: 6, name: "Mister Barge", currentDockId: 4 }
     ],
     shippingShips: [
         { id: 1, name: "Nautical Nymph", haulerId: 2 },

@@ -42,7 +42,7 @@ document.addEventListener(
             // Iterate through all of the haulers
             for (const hauler of haulers) {
                 // Does the dockId foreign key on the hauler object match the id of the clicked dock?
-                if (dockId === `${hauler.dockId}`) {
+                if (dockId === `${hauler.currentDockId}`) {
                     // Iterate through contracts and check if contract exists between hauler and dock
                     for (const contract of contracts) {
                         if (dockId === `${contract.dockId}` && contract.haulerId === hauler.id) {
